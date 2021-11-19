@@ -14,6 +14,6 @@ export default class AboutMe extends Vue {}
 .aboutme {
   width: 100%;
   height: 1000px;
-  background-color: black;
+  background-color: greenyellow;
 }
 </style>
