@@ -1,21 +1,31 @@
 <template>
   <div class="startpage">
     <div class="content">
+      <div class="language"><p id="language-selector">DE/ENG</p></div>
       <div class="title">
         <div class="title-box">
-          <a href=""
-            ><p class="title-content" id="vorname">FRIEDRICH</p>
-            <p class="title-content" id="nachname">VÖLKERS</p></a
-          >
+          <p class="title-content" id="vorname">FRIEDRICH</p>
+          <p class="title-content" id="nachname">VÖLKERS</p>
         </div>
       </div>
       <ul>
-        <li><a href="#page-programming">Programmieren</a></li>
-        <li><a href="">Musik</a></li>
-        <li><a href="">Über Mich</a></li>
-        <li><a href="">Kontakt</a></li>
+        <li>
+          <router-link to="#programming" class="underline-animation"
+            >Programmieren</router-link
+          >
+        </li>
+        <li>
+          <router-link to="" class="underline-animation">Musik</router-link>
+        </li>
+        <li>
+          <router-link to="" class="underline-animation">Über Mich</router-link>
+        </li>
+        <li>
+          <router-link to="#contact" class="underline-animation"
+            >Kontakt</router-link
+          >
+        </li>
       </ul>
-      <div class="language"><p id="language-selector">DE/ENG</p></div>
     </div>
   </div>
 </template>
@@ -35,15 +45,15 @@ export default class StartPage extends Vue {
   height: 100vh;
   width: 100vw;
   max-width: 100%;
-  background: linear-gradient(
+  /*   background: linear-gradient(
         90deg,
         rgb(255, 255, 255) (22px - 2px),
         transparent 1%
       )
       center,
     linear-gradient(rgb(255, 255, 255) (22px - 2px), transparent 1%) center,
-    rgba(80, 80, 80, 0.5);
-  background-size: 22px 22px;
+    rgba(80, 80, 80, 0.466);
+  background-size: 22px 22px; */
 }
 
 .content {
@@ -64,7 +74,7 @@ ul {
   font-size: 4rem;
   text-align: center;
   height: 15vh;
-  padding-top: 35vh;
+  padding-top: 25vh;
   padding-bottom: 0vh;
   margin-left: auto;
   margin-right: auto;
@@ -74,6 +84,7 @@ ul {
 
 .title-content {
   display: inline-block;
+  color: black;
 }
 
 #vorname {
@@ -83,7 +94,7 @@ ul {
 ul {
   text-align: center;
   font-size: 2rem;
-  height: 45vh;
+  height: 55vh;
 }
 
 .language {
@@ -114,6 +125,28 @@ li:last-child {
 }
 
 // Animation
+.underline-animation {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.521);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 a {
   color: black;
