@@ -70,7 +70,6 @@ export default class Contact extends Vue {
     this.readData.mail = document.getElementsByTagName("input")[2].value;
     this.readData.betreff = document.getElementsByTagName("input")[3].value;
     this.readData.message = document.getElementsByTagName("input")[4].value;
-    console.log(this.readData);
     return;
   }
 }
