@@ -1,6 +1,6 @@
 <template>
   <div class="content" id="programming">
-    <div data-aos="zoom-in"><p>Programmieren</p></div>
+    <div data-aos="zoom-in"><p>Projekte</p></div>
     <div class="element">
       <div class="left-element picture" data-aos="fade-right">
         <img src="../assets/dc_1.png" alt="" />

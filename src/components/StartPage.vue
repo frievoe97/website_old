@@ -11,7 +11,7 @@
       <ul>
         <li>
           <router-link to="#programming" class="underline-animation"
-            >Programmieren</router-link
+            >Projekte</router-link
           >
         </li>
         <li>
