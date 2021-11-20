@@ -33,7 +33,7 @@ export default class Footer extends Vue {}
 }
 
 .footer-top {
-  background-color: rgb(87, 87, 87);
+  background-color: rgba(87, 87, 87, 0.336);
   height: 400px;
 }
 
