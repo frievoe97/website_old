@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Main from "../views/Main.vue";
+import Imprint from "../components/Imprint.vue";
 
 Vue.use(VueRouter);
 
@@ -9,6 +10,11 @@ const routes: Array<RouteConfig> = [
     path: "/",
     name: "Main",
     component: Main,
+  },
+  {
+    path: "/imprint",
+    name: "Main",
+    component: Imprint,
   },
   {
     path: "/about",

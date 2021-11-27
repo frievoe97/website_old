@@ -11304,6 +11304,11 @@
   "resolved" "https://registry.npmjs.org/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz"
   "version" "2.3.4"
 
+"vue-i18n@^8.26.7":
+  "integrity" "sha512-7apa5PvRg1YCLoraE3lOgpCG8hJGupLCtywQWedWsgBbvF0TOgFvhitqK9xRH0PBGG1G8aiJz9oklyNDFfDxLg=="
+  "resolved" "https://registry.npmjs.org/vue-i18n/-/vue-i18n-8.26.7.tgz"
+  "version" "8.26.7"
+
 "vue-jest@^3.0.5":
   "integrity" "sha512-PIOxFM+wsBMry26ZpfBvUQ/DGH2hvp5khDQ1n51g3bN0TwFwTy4J85XVfxTRMukqHji/GnAoGUnlZ5Ao73K62w=="
   "resolved" "https://registry.npmjs.org/vue-jest/-/vue-jest-3.0.7.tgz"
@@ -11340,6 +11345,11 @@
     "loader-utils" "^1.1.0"
     "vue-hot-reload-api" "^2.3.0"
     "vue-style-loader" "^4.1.0"
+
+"vue-page-title@^1.2.5":
+  "integrity" "sha512-gV58KnER4LIM2vLX/MBapWBkoLzGyIdXwSvKs4Pa/Y4tJ2SRNh/R7kkzzZw9ikDAaYHxRrV8FmfB7QwCE9Gv7g=="
+  "resolved" "https://registry.npmjs.org/vue-page-title/-/vue-page-title-1.2.5.tgz"
+  "version" "1.2.5"
 
 "vue-property-decorator@^9.1.2", "vue-property-decorator@<10":
   "integrity" "sha512-xYA8MkZynPBGd/w5QFJ2d/NM0z/YeegMqYTphy7NJQXbZcuU6FC6AOdUAcy4SXP+YnkerC6AfH+ldg7PDk9ESQ=="
@@ -11381,6 +11391,11 @@
   "integrity" "sha512-oiDgdOQZf+6lKs+8yFD63i6LepLcUJVGc1CYJmYRzag7n2fQ3ywJAVn9jaqL2AVpDV1v1qNYQETcdAjVUpSB1g=="
   "resolved" "https://registry.npmjs.org/vue2-smooth-scroll/-/vue2-smooth-scroll-1.5.1.tgz"
   "version" "1.5.1"
+
+"vuex@^3.6.2":
+  "integrity" "sha512-ETW44IqCgBpVomy520DT5jf8n0zoCac+sxWnn+hMe/CzaSejb/eVw2YToiXYX+Ex/AuHHia28vWTq4goAexFbw=="
+  "resolved" "https://registry.npmjs.org/vuex/-/vuex-3.6.2.tgz"
+  "version" "3.6.2"
 
 "w3c-hr-time@^1.0.1":
   "integrity" "sha512-z8P5DvDNjKDoFIHK7q8r8lackT6l+jo/Ye3HOle7l9nICP9lf1Ci25fy9vHd0JOWewkIFzXIEig3TdKT7JQ5fQ=="

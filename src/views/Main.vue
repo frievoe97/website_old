@@ -82,10 +82,16 @@
         detectRetina: true,
       }"
     /> -->
-    <div id="tsparticles"></div>
+
     <StartPage class="component" />
-    <Content class="component" />
+    <Linebreak class="component" />
+    <AboutMe class="component" />
+    <Linebreak class="component" />
+    <!-- <Content class="component" /> -->
+    <ContentReload class="component" />
+    <Linebreak class="component" />
     <Contact class="component" />
+    <Linebreak class="component" />
     <Footer class="component" />
   </div>
 </template>
@@ -97,9 +103,19 @@ import Content from "@/components/Content.vue";
 import AboutMe from "@/components/AboutMe.vue";
 import Contact from "@/components/Contact.vue";
 import Footer from "@/components/Footer.vue";
+import Linebreak from "@/components/Linebreak.vue";
+import ContentReload from "@/components/ContentReload.vue";
 
 @Component({
-  components: { StartPage, Content, AboutMe, Contact, Footer },
+  components: {
+    StartPage,
+    Content,
+    AboutMe,
+    Contact,
+    Footer,
+    Linebreak,
+    ContentReload,
+  },
 })
 export default class Main extends Vue {}
 </script>
