@@ -1,6 +1,6 @@
 <template>
   <div class="content" id="programming">
-    <div data-aos="zoom-in"><p>Projekte</p></div>
+    <div data-aos="zoom-in"><p>Projects</p></div>
     <div class="element">
       <div class="left-element picture" data-aos="fade-right">
         <img src="../assets/dc_1.png" alt="" />
@@ -35,13 +35,13 @@
         <img src="../assets/pf_2.gif" alt="" />
       </div>
     </div>
-    <div class="element" id="programming">
+    <div class="element">
       <div class="left-element picture" data-aos="fade-right">
-        <img src="../assets/dc_1.png" alt="" />
+        <img src="../assets/ws_1.png" alt="" />
       </div>
       <div class="element-space"></div>
       <div class="right-element" data-aos="fade-left">
-        <p class="header-element">Dumb Calculator (iOS)</p>
+        <p class="header-element">Website</p>
         <p class="text">
           You were not good at math and feel arrogant towards other calculators?
           Then Dumb Calculator is exactly what you need. Dumb Calculator doesn't
@@ -50,56 +50,6 @@
           project is an open source project where anyone can contribute and is
           currently only available for iOS.
         </p>
-      </div>
-    </div>
-    <div class="element">
-      <div class="left-element" data-aos="fade-right">
-        <p class="header-element">Dijkstra Pathfinder</p>
-        <p class="text">
-          You were not good at math and feel arrogant towards other calculators?
-          Then Dumb Calculator is exactly what you need. Dumb Calculator doesn't
-          fool anyone and that's exactly what it doesn't claim to do. Dumb
-          Calculator is an honest calculator that makes mistakes sometimes.<br />The
-          project is an open source project where anyone can contribute and is
-          currently only available for iOS.
-        </p>
-      </div>
-      <div class="right-element picture" data-aos="fade-left">
-        <img src="../assets/pf_2.gif" alt="" />
-      </div>
-    </div>
-    <div class="element" id="programming">
-      <div class="left-element picture" data-aos="fade-right">
-        <img src="../assets/dc_1.png" alt="" />
-      </div>
-      <div class="element-space"></div>
-      <div class="right-element" data-aos="fade-left">
-        <p class="header-element">Dumb Calculator (iOS)</p>
-        <p class="text">
-          You were not good at math and feel arrogant towards other calculators?
-          Then Dumb Calculator is exactly what you need. Dumb Calculator doesn't
-          fool anyone and that's exactly what it doesn't claim to do. Dumb
-          Calculator is an honest calculator that makes mistakes sometimes.<br />The
-          project is an open source project where anyone can contribute and is
-          currently only available for iOS.
-        </p>
-      </div>
-    </div>
-    <div class="element">
-      <div class="left-element" data-aos="fade-right">
-        <p class="header-element">Dijkstra Pathfinder</p>
-        <p class="text">
-          You were not good at math and feel arrogant towards other calculators?
-          Then Dumb Calculator is exactly what you need. Dumb Calculator doesn't
-          fool anyone and that's exactly what it doesn't claim to do. Dumb
-          Calculator is an honest calculator that makes mistakes sometimes.<br />The
-          project is an open source project where anyone can contribute and is
-          currently only available for iOS.
-        </p>
-      </div>
-      <div class="element-space"></div>
-      <div class="right-element picture" data-aos="fade-left">
-        <img src="../assets/pf_2.gif" alt="" />
       </div>
     </div>
   </div>
@@ -108,8 +58,12 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
+// eslint-disable-next-line
+import globalStore from "@/store";
+
 @Component
-export default class Content extends Vue {}
+class VueComponent extends Vue {}
+export default VueComponent;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

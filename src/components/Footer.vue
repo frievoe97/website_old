@@ -3,11 +3,23 @@
     <div class="footer-top"></div>
     <div class="footer-bottom">
       <ul>
-        <li>Impressum</li>
+        <li>
+          <router-link to="/imprint" class="router-link-style"
+            >Impressum</router-link
+          >
+        </li>
         <li>Privacy Policy</li>
-        <li>Kontakt</li>
+        <li>
+          <router-link to="#contact" class="router-link-style"
+            >Kontakt</router-link
+          >
+        </li>
         <li>Sitemap</li>
-        <li>Friedrich Völkers</li>
+        <li>
+          <router-link to="#startpage" class="router-link-style"
+            >Friedrich Völkers</router-link
+          >
+        </li>
       </ul>
     </div>
   </div>
@@ -15,9 +27,12 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+// eslint-disable-next-line
+import globalStore from "@/store";
 
 @Component
-export default class Footer extends Vue {}
+class VueComponent extends Vue {}
+export default VueComponent;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -49,7 +64,7 @@ ul {
   position: absolute;
   padding: 0;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   left: 0;
   right: 0;
   text-align: center;
@@ -62,9 +77,14 @@ li {
   display: inline;
   text-decoration: none;
   padding-right: 50px;
-  color: white;
+  color: rgb(184, 184, 184);
 }
 li:last-child {
   padding: 0;
+}
+
+.router-link-style {
+  color: rgb(184, 184, 184);
+  text-decoration: none;
 }
 </style>

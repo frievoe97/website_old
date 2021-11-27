@@ -1,7 +1,25 @@
+<i18n>
+en:
+  aboutMe: 'About Me'
+  projects: 'Projects'
+  music: 'Music'
+  contact: 'Contact'
+de:
+  aboutMe: 'Über Mich'
+  projects: 'Projekte'
+  music: 'Musik'
+  contact: 'Kontakt'
+</i18n>
 <template>
-  <div class="startpage">
+  <div class="startpage" id="startpage">
     <div class="content">
-      <div class="language"><p id="language-selector">DE/ENG</p></div>
+      <div class="language">
+        <div class="languageBox">
+          <p class="language-selector">DE</p>
+          <p class="language-selector">/</p>
+          <p class="language-selector">ENG</p>
+        </div>
+      </div>
       <div class="title">
         <div class="title-box">
           <p class="title-content" id="vorname">FRIEDRICH</p>
@@ -10,22 +28,30 @@
       </div>
       <ul>
         <li>
-          <router-link to="#programming" class="underline-animation"
-            >Projekte</router-link
+          <router-link to="#aboutme" class="underline-animation"
+            >About Me</router-link
           >
         </li>
         <li>
-          <router-link to="" class="underline-animation">Musik</router-link>
+          <router-link to="#programming" class="underline-animation"
+            >Projects</router-link
+          >
         </li>
+
         <li>
-          <router-link to="" class="underline-animation">Über Mich</router-link>
+          <router-link to="" class="underline-animation">Music</router-link>
         </li>
         <li>
           <router-link to="#contact" class="underline-animation"
-            >Kontakt</router-link
+            >Contact</router-link
           >
         </li>
       </ul>
+      <div class="scrollUp">
+        <router-link to="#startpage" class="arrowRouter"
+          ><img class="arrow" src="@/assets/icons/arrow_top.png"
+        /></router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -33,10 +59,12 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
+// eslint-disable-next-line
+import globalStore from "@/store";
+
 @Component
-export default class StartPage extends Vue {
-  //@Prop() private msg!: string;
-}
+class VueComponent extends Vue {}
+export default VueComponent;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -74,7 +102,7 @@ ul {
   font-size: 4rem;
   text-align: center;
   height: 15vh;
-  padding-top: 25vh;
+  padding-top: 35vh;
   padding-bottom: 0vh;
   margin-left: auto;
   margin-right: auto;
@@ -94,21 +122,7 @@ ul {
 ul {
   text-align: center;
   font-size: 2rem;
-  height: 55vh;
-}
-
-.language {
-  font-size: 1.5rem;
-  height: 10vh;
-  position: relative;
-  font-weight: 300;
-  letter-spacing: 3px;
-}
-
-#language-selector {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  height: 50vh;
 }
 
 li {
@@ -151,5 +165,44 @@ li:last-child {
 a {
   color: black;
   text-decoration: none;
+}
+
+.language {
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: right;
+  font-size: 1.5rem;
+
+  width: 100%;
+  font-weight: 300;
+  letter-spacing: 3px;
+  right: -15px;
+}
+
+.language-selector {
+  display: inline;
+}
+
+.languageBox {
+  margin: 20px;
+}
+
+.scrollUp {
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: right;
+  right: -15px;
+  bottom: 0;
+}
+
+.arrowRouter {
+  width: 100%;
+}
+
+.arrow {
+  width: 50px;
+  margin: 20px;
 }
 </style>

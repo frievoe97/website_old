@@ -41,8 +41,12 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
+// eslint-disable-next-line
+import globalStore from "@/store";
+
 @Component
-export default class Contact extends Vue {}
+class VueComponent extends Vue {}
+export default VueComponent;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
