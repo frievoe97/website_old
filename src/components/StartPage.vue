@@ -13,6 +13,60 @@ de:
 <template>
   <div class="startpage" id="startpage">
     <div class="content">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+          <input type="checkbox" />
+
+          <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+          <ul id="menu">
+            <a href="#"
+              ><li>
+                <router-link to="#aboutme" class="underline-animation"
+                  >About Me</router-link
+                >
+              </li></a
+            >
+            <a href="#"
+              ><li>
+                <router-link to="#programming" class="underline-animation"
+                  >Projects</router-link
+                >
+              </li></a
+            >
+            <a href="#"
+              ><li>
+                <router-link to="" class="underline-animation"
+                  >Music</router-link
+                >
+              </li></a
+            >
+            <a href="#"
+              ><li>
+                <router-link to="#contact" class="underline-animation"
+                  >Contact</router-link
+                >
+              </li></a
+            >
+          </ul>
+        </div>
+      </nav>
       <div class="language">
         <div class="languageBox">
           <p class="language-selector">DE</p>
@@ -26,7 +80,7 @@ de:
           <p class="title-content" id="nachname">VÖLKERS</p>
         </div>
       </div>
-      <ul>
+      <ul class="menue">
         <li>
           <router-link to="#aboutme" class="underline-animation"
             >About Me</router-link
@@ -82,6 +136,11 @@ export default VueComponent;
     linear-gradient(rgb(255, 255, 255) (22px - 2px), transparent 1%) center,
     rgba(80, 80, 80, 0.466);
   background-size: 22px 22px; */
+}
+
+nav {
+  visibility: hidden;
+  height: 0;
 }
 
 .content {
@@ -204,5 +263,182 @@ a {
 .arrow {
   width: 50px;
   margin: 20px;
+}
+
+@media only screen and (max-width: 1020px) {
+  .content {
+    position: relative;
+  }
+
+  .title {
+    padding: 0;
+    text-align: right;
+    top: 0;
+    left: 0;
+  }
+
+  .title-box {
+    margin: 50px;
+    margin-top: 36px;
+    margin-right: 37px;
+  }
+
+  #vorname {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  #nachname {
+    margin: 0;
+  }
+
+  .language {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .arrow {
+    visibility: hidden;
+  }
+
+  .menue {
+    visibility: hidden;
+    height: 0;
+  }
+
+  // Menue
+  nav {
+    height: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    visibility: inherit;
+  }
+
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 37px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.5s ease;
+  }
+
+  #menuToggle a:hover {
+    color: tomato;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  /*
+ * Just a quick hamburger
+ */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  /*
+ * But let's hide the middle one.
+ */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+ * Ohyeah and the last one should go the other direction
+ */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  /*
+ * And let's slide it in from the left
+ */
+  #menuToggle input:checked ~ ul {
+    transform: none;
+  }
 }
 </style>
