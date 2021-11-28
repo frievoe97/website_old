@@ -66,8 +66,6 @@ export default VueComponent;
   font-weight: 300;
   padding: 30px;
   letter-spacing: 4px;
-  margin-top: 56px;
-  margin-bottom: 56px;
 }
 
 .card {
@@ -141,5 +139,28 @@ img {
 }
 
 .image-extra-margin {
+}
+
+@media only screen and (max-width: 1115px) {
+  .content {
+    width: 100%;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .card-text {
+    font-size: 1.2rem;
+    padding: 20px;
+    order: 3;
+    flex: 1 100%;
+  }
+
+  .card-image {
+    padding: 20px;
+    order: 2;
+    flex: 1 100%;
+  }
 }
 </style>

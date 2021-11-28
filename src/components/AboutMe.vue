@@ -144,4 +144,18 @@ img {
   font-weight: 400;
   padding-top: 0;
 }
+
+@media only screen and (max-width: 1115px) {
+  .aboutme {
+    width: 100%;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .card-text {
+    font-size: 1.2rem;
+  }
+}
 </style>
