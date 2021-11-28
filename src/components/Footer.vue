@@ -1,21 +1,60 @@
 <template>
   <div class="footer">
-    <div class="footer-top"></div>
+    <div class="footer-top">
+      <div class="footer-top-content">
+        <div class="footer-sub">
+          <p class="footer-head">Über Mich</p>
+        </div>
+        <div class="footer-sub">
+          <p class="footer-head">Projekte</p>
+          <ul class="footer-list">
+            <li>Dumb Calculator (iOS)</li>
+            <li>Pathfinder</li>
+          </ul>
+        </div>
+        <div class="footer-sub">
+          <p class="footer-head">Musik</p>
+          <ul class="footer-list">
+            <li>Equitment</li>
+            <li>Projekte</li>
+            <li>Preise</li>
+          </ul>
+        </div>
+        <div class="footer-sub">
+          <p class="footer-head">Über Mich</p>
+        </div>
+        <div class="footer-sub">
+          <p class="footer-head">Projekte</p>
+          <ul class="footer-list">
+            <li>Dumb Calculator (iOS)</li>
+            <li>Pathfinder</li>
+          </ul>
+        </div>
+        <div class="footer-sub">
+          <p class="footer-head">Musik</p>
+          <ul class="footer-list">
+            <li>Equitment</li>
+            <li>Projekte</li>
+            <li>Preise</li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="footer-bottom">
-      <ul>
-        <li>
+      <ul class="ul-bottom">
+        <li class="li-bottom">
           <router-link to="/imprint" class="router-link-style"
             >Impressum</router-link
           >
         </li>
-        <li>Privacy Policy</li>
-        <li>
+        <li class="li-bottom">Privacy Policy</li>
+        <li class="li-bottom">
           <router-link to="#contact" class="router-link-style"
             >Kontakt</router-link
           >
         </li>
-        <li>Sitemap</li>
-        <li>
+        <li class="li-bottom">Sitemap</li>
+        <li class="li-bottom">
           <router-link to="#startpage" class="router-link-style"
             >Friedrich Völkers</router-link
           >
@@ -50,6 +89,24 @@ export default VueComponent;
 .footer-top {
   background-color: rgba(87, 87, 87, 0.336);
   height: 400px;
+  color: white;
+}
+
+.footer-top-content {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: unset;
+}
+
+.footer-sub {
+  width: 250px;
+}
+
+.footer-list {
+  color: white;
+  display: inline;
 }
 
 .footer-bottom {
@@ -61,7 +118,7 @@ export default VueComponent;
   position: relative;
 }
 
-ul {
+.ul-bottom {
   position: absolute;
   padding: 0;
   margin: 0;

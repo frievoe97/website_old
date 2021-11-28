@@ -50,6 +50,13 @@ de:
                 >
               </li></a
             >
+            <a href="#"
+              ><li>
+                <router-link to="" class="underline-animation"
+                  >DE/ENG</router-link
+                >
+              </li></a
+            >
           </ul>
         </div>
       </nav>
@@ -145,6 +152,7 @@ ul {
   font-weight: 300;
   letter-spacing: 10px;
   font-size: 4rem;
+
   text-align: center;
   height: 15vh;
   padding-top: 35vh;
@@ -265,6 +273,11 @@ a {
     text-align: right;
     top: 0;
     left: 0;
+    font-size: max(4rem);
+  }
+
+  .title-content {
+    width: 100%;
   }
 
   .scrollUp {
@@ -390,8 +403,8 @@ a {
     position: absolute;
     top: -50px;
     left: -37px;
-    width: 100%;
-    height: calc(100vh - 15px);
+    width: calc(100vw - 15px);
+    height: calc(100vh);
     //margin: -100px 0 0 -50px;
     //padding: 50px;
     //padding-top: 125px;
