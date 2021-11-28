@@ -267,6 +267,19 @@ a {
     left: 0;
   }
 
+  .scrollUp {
+    width: 0;
+    left: 0;
+  }
+
+  .arrowRouter {
+    width: 0;
+  }
+
+  .arrow {
+    width: 0;
+  }
+
   .title-box {
     //margin: 50px;
     margin-top: 136px;
@@ -307,6 +320,7 @@ a {
   }
 
   #menuToggle {
+    width: calc(100% - 37px);
     display: block;
     position: relative;
     top: 50px;

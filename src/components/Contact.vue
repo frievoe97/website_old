@@ -108,8 +108,8 @@ export default class Contact extends Vue {
 <style scoped lang="scss">
 .contact {
   max-width: 1000px;
-  height: 100vh;
-  min-height: min-content;
+  height: max-content;
+  min-height: 100vh;
   margin-left: auto;
   margin-right: auto;
 }

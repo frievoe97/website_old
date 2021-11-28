@@ -82,7 +82,6 @@
         detectRetina: true,
       }"
     /> -->
-
     <StartPage class="component" />
     <Linebreak class="component" />
     <AboutMe class="component" />
