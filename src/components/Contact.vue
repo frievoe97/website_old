@@ -231,5 +231,8 @@ input {
   .card {
     width: 80%;
   }
+  input {
+    border-radius: 0;
+  }
 }
 </style>
