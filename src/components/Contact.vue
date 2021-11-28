@@ -3,7 +3,7 @@
     <div class="header">Contact</div>
     <div class="card">
       <!-- <div class="header">Contact</div> -->
-      <div data-aos="zoom-in">
+      <div class="carddiv" data-aos="zoom-in">
         <div class="contact-formula">
           <div class="text-input" id="firstName">
             <div class="element" id="one">
@@ -109,7 +109,7 @@ export default class Contact extends Vue {
 .contact {
   max-width: 1000px;
   height: 100vh;
-  min-height: max-content;
+  min-height: min-content;
   margin-left: auto;
   margin-right: auto;
 }
@@ -141,6 +141,10 @@ export default class Contact extends Vue {
   margin-bottom: 150px;
   padding: 40px;
   box-sizing: border-box;
+}
+
+.carddiv {
+  height: max-content;
 }
 
 p {

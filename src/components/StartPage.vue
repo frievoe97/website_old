@@ -268,10 +268,10 @@ a {
   }
 
   .title-box {
-    margin: 50px;
-    //margin-top: 36px;
-    margin-top: 150px;
-    margin-right: 37px;
+    //margin: 50px;
+    margin-top: 136px;
+    //margin-top: 150px;
+    //margin-right: 37px;
   }
 
   #vorname {

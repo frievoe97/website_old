@@ -57,6 +57,7 @@ export default VueComponent;
   margin-right: auto;
   width: 1000px;
   height: 100px;
+
   position: relative;
 }
 
@@ -91,6 +92,10 @@ li:last-child {
 @media only screen and (max-width: 1115px) {
   .footer-bottom {
     width: 100%;
+  }
+
+  li {
+    padding: 0;
   }
 }
 </style>

@@ -100,6 +100,9 @@ export default VueComponent;
 
 img {
   width: 400px;
+  //height: 400px;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .card-text {
@@ -151,6 +154,8 @@ img {
   }
 
   .card-text {
+    letter-spacing: 1px;
+    line-height: 1.5;
     font-size: 1.2rem;
     padding: 20px;
     order: 3;

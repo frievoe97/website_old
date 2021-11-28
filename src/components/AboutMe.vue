@@ -156,6 +156,10 @@ img {
 
   .card-text {
     font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    padding: 20px;
   }
 }
 </style>
