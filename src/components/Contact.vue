@@ -223,5 +223,9 @@ input {
   #lastName {
     flex: 1 100%;
   }
+
+  .card {
+    width: 80%;
+  }
 }
 </style>

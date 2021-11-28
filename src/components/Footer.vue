@@ -87,4 +87,10 @@ li:last-child {
   color: rgb(184, 184, 184);
   text-decoration: none;
 }
+
+@media only screen and (max-width: 1115px) {
+  .footer-bottom {
+    width: 100%;
+  }
+}
 </style>

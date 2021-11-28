@@ -15,27 +15,13 @@ de:
     <div class="content">
       <nav role="navigation">
         <div id="menuToggle">
-          <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
           <input type="checkbox" />
 
-          <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
           <span></span>
           <span></span>
           <span></span>
 
-          <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-          <ul id="menu">
+          <ul id="menu2">
             <a href="#"
               ><li>
                 <router-link to="#aboutme" class="underline-animation"
@@ -265,9 +251,13 @@ a {
   margin: 20px;
 }
 
-@media only screen and (max-width: 1020px) {
+@media only screen and (max-width: 1115px) {
   .content {
     position: relative;
+  }
+
+  li {
+    display: block;
   }
 
   .title {
@@ -279,7 +269,8 @@ a {
 
   .title-box {
     margin: 50px;
-    margin-top: 36px;
+    //margin-top: 36px;
+    margin-top: 150px;
     margin-right: 37px;
   }
 
@@ -328,12 +319,7 @@ a {
   #menuToggle a {
     text-decoration: none;
     color: #232323;
-
     transition: color 0.5s ease;
-  }
-
-  #menuToggle a:hover {
-    color: tomato;
   }
 
   #menuToggle input {
@@ -343,32 +329,22 @@ a {
     position: absolute;
     top: -7px;
     left: -5px;
-
     cursor: pointer;
-
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
-
+    opacity: 0;
+    z-index: 2;
     -webkit-touch-callout: none;
   }
 
-  /*
- * Just a quick hamburger
- */
   #menuToggle span {
     display: block;
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-
-    background: #cdcdcd;
+    background: black;
     border-radius: 3px;
-
     z-index: 1;
-
     transform-origin: 4px 0px;
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
       background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
@@ -381,62 +357,45 @@ a {
     transform-origin: 0% 100%;
   }
 
-  /* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
   #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #232323;
   }
 
-  /*
- * But let's hide the middle one.
- */
   #menuToggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
 
-  /*
- * Ohyeah and the last one should go the other direction
- */
   #menuToggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
 
-  /*
- * Make this absolute positioned
- * at the top left of the screen
- */
-  #menu {
+  #menu2 {
     position: absolute;
+    top: -50px;
+    left: -37px;
     width: 100%;
-    height: 100vh;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
-
+    height: calc(100vh - 15px);
+    //margin: -100px 0 0 -50px;
+    //padding: 50px;
+    //padding-top: 125px;
+    padding: 100px;
+    box-sizing: border-box;
     background: #ededed;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
 
-  #menu li {
-    padding: 10px 0;
+  #menu2 li {
+    padding: 20px 0;
     font-size: 22px;
   }
 
-  /*
- * And let's slide it in from the left
- */
   #menuToggle input:checked ~ ul {
     transform: none;
   }
