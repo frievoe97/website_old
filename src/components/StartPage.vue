@@ -120,6 +120,7 @@ export default VueComponent;
   height: 100vh;
   width: 100vw;
   max-width: 100%;
+  background-color: #f4f9e9;
   /*   background: linear-gradient(
         90deg,
         rgb(255, 255, 255) (22px - 2px),

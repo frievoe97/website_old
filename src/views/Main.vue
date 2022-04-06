@@ -83,6 +83,7 @@
       }"
     /> -->
     <StartPage class="component" />
+    <Projects class="component" />
     <Linebreak class="component" />
     <AboutMe class="component" />
     <Linebreak class="component" />
@@ -104,6 +105,7 @@ import Contact from "@/components/Contact.vue";
 import Footer from "@/components/Footer.vue";
 import Linebreak from "@/components/Linebreak.vue";
 import ContentReload from "@/components/ContentReload.vue";
+import Projects from "@/components/Projects.vue";
 
 @Component({
   components: {
@@ -114,6 +116,7 @@ import ContentReload from "@/components/ContentReload.vue";
     Footer,
     Linebreak,
     ContentReload,
+    Projects,
   },
 })
 export default class Main extends Vue {}
